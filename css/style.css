@@ -1,0 +1,288 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "fonte1";
+  src: url(../fonte/ItauTextPro_W_Bd.woff);
+}
+@font-face {
+  font-family: "fonte4";
+  src: url(../fonte/ItauTextPro_W_XBd.woff);
+}
+body {
+  background-color: #090915;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #090915;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+nav .logo {
+  width: 250px;
+}
+nav .logo img {
+  width: 100%;
+}
+nav ul {
+  width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav ul li {
+  list-style: none;
+  transition: 0.1s ease-in-out;
+}
+nav ul li a {
+  text-decoration: none;
+  font-family: "fonte1";
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+}
+nav ul li:hover {
+  transition: 0.1s ease-in-out;
+  border-bottom: 1px solid #ff6201;
+  padding-bottom: 5px;
+}
+nav ul li:hover a {
+  color: #ff6201;
+  transition: 0.1s ease-in-out;
+}
+
+header {
+  margin-top: 10vh;
+  height: 90vh;
+  background-image: url(../img/capa3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .box {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .box h1 {
+  font-family: "fonte4";
+  font-size: 95px;
+  color: #fff;
+  text-shadow: 3px 3px 15px black;
+}
+header .box span {
+  color: #ff6201;
+  text-shadow: 3px 3px 15px black;
+}
+
+.cursos {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+}
+.cursos .container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.cursos .container .title {
+  width: 95%;
+  margin-bottom: 30px;
+}
+.cursos .container .title h1 {
+  font-family: "fonte4";
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #ff6201;
+  text-shadow: 3px 3px 15px black;
+}
+.cursos .container .title-dois {
+  width: 95%;
+  margin-bottom: 30px;
+}
+.cursos .container .title-dois h1 {
+  font-family: "fonte1";
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #ff6201;
+  text-shadow: 3px 3px 15px black;
+}
+.cursos .container .container-caixas {
+  width: 95%;
+}
+.cursos .container .box-container {
+  margin-bottom: 50px;
+  height: 50%;
+}
+.cursos .container .box-container .maisCursos {
+  margin-top: 10px;
+}
+.cursos .container .box-container .maisCursos p {
+  font-family: "fonte1";
+  text-transform: uppercase;
+  color: #ff6201;
+  text-decoration: underline;
+}
+.cursos .container .box-container .maisCursos p:hover {
+  color: #ff741d;
+  cursor: pointer;
+}
+
+.ajuda-box {
+  position: fixed;
+  top: 800px;
+  left: 90vw;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 100;
+  cursor: pointer;
+}
+.ajuda-box img {
+  width: 80%;
+}
+.ajuda-box p {
+  color: #fff;
+  font-family: "fonte1";
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.chat-box {
+  display: none;
+  position: fixed;
+  top: 70%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 20px;
+  text-align: center;
+  border-radius: 45px 35px 0px 45px;
+}
+
+.mensagem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mensagem img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.mensagem p {
+  margin: 0;
+}
+
+.respostas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #ff6201;
+}
+
+.link-resposta {
+  background-color: #ff6201; /* Vermelho */
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.link-resposta:hover {
+  background-color: #ff741d; /* Tom mais escuro de vermelho ao passar o mouse */
+}
+
+.conversa {
+  max-height: 300px; /* Altura máxima para o chat scrollar */
+  overflow-y: auto; /* Adiciona scroll vertical se necessário */
+}
+
+.mensagem {
+  display: flex;
+  align-items: flex-start; /* Alinha as mensagens no topo */
+  margin-bottom: 10px;
+}
+
+.mensagem-astronauta {
+  justify-content: flex-start; /* Alinha à esquerda */
+}
+
+.mensagem-usuario {
+  justify-content: flex-end; /* Alinha à direita */
+}
+
+.mensagem img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.mensagem p {
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-family: "fonte1";
+  font-size: 14px;
+  border-radius: 0px 15px 15px 15px;
+  text-align: start;
+}
+
+.respostas {
+  display: none; /* Inicia escondido */
+  justify-content: space-around;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */
